@@ -13,3 +13,12 @@ console.log(eta);
 // colcolo del prezzo al km
 var calcoloPrezzoKm = 0.21 * km;
 console.log(calcoloPrezzoKm);
+
+// calcoli di sconto
+var sconto = calcoloPrezzoKm * 0.2;
+var prezzoScontato = calcoloPrezzoKm - sconto;
+
+// sconto under 18
+if (eta < 18){
+  prezzoScontato;
+}
