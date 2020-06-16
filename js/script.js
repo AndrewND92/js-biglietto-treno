@@ -8,17 +8,30 @@ console.log(km);
 
 // chiedere l'età
 var eta = prompt("quanti anni hai?")
-console.log(eta);
+// console.log(eta);
 
 // colcolo del prezzo al km
 var calcoloPrezzoKm = 0.21 * km;
-console.log(calcoloPrezzoKm);
+// console.log(calcoloPrezzoKm);
 
 // calcoli di sconto
-var sconto = calcoloPrezzoKm * 0.2;
-var prezzoScontato = calcoloPrezzoKm - sconto;
 
-// sconto under 18
+var sconto;
+sconto = calcoloPrezzoKm * 0.2;
+
+var prezzoScontato;
+prezzoScontato = calcoloPrezzoKm - sconto;
+
+
+
+
+//
 if (eta < 18){
-  prezzoScontato;
+calcoloPrezzoKm = calcoloPrezzoKm - calcoloPrezzoKm *0.2;
+
+} else if (eta > 65) {
+  calcoloPrezzoKm = calcoloPrezzoKm - calcoloPrezzoKm *0.4;
 }
+
+// output utente
+document.getElementById('title').innerHTML = "Grazie, il prezzo del biglietto è di: " + calcoloPrezzoKm.toFixed(2);
